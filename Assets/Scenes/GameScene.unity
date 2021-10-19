@@ -598,6 +598,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: AngryDuck
       objectReference: {fileID: 0}
+    - target: {fileID: 3682253748499513583, guid: fa616eb311850a54498fbc4920bda0fa,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9128773495855167462, guid: fa616eb311850a54498fbc4920bda0fa,
         type: 3}
       propertyPath: m_Constraints

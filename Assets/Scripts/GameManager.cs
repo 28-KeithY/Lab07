@@ -10,6 +10,9 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Text Txt_Message = null;
     private int Score = 0;
 
+    public GameObject ScoreText;
+    public int Scorecount;
+
     void Start()
     {
         thisManager = this;
@@ -18,6 +21,8 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
+        ScoreText.GetComponent<Text>().text = "SCORE : " + Scorecount;
+
         if (Time.timeScale == 0 && Input.GetKeyDown(KeyCode.Return))
             StartGame();
     }

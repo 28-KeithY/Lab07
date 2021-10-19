@@ -18,7 +18,7 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-        if (player.transform.position.y < 3.69f)
+        if (player.transform.position.y < 3.65f)
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {

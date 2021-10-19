@@ -13,10 +13,14 @@ public class GameManager : MonoBehaviour
     public GameObject ScoreText;
     public int Scorecount;
 
+    private AudioSource audiosource;
+
     void Start()
     {
         thisManager = this;
         Time.timeScale = 0;
+
+        audiosource = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -24,7 +28,10 @@ public class GameManager : MonoBehaviour
         ScoreText.GetComponent<Text>().text = "SCORE : " + Scorecount;
 
         if (Time.timeScale == 0 && Input.GetKeyDown(KeyCode.Return))
+        {
             StartGame();
+            audiosource.Play();
+        }
     }
 
     public void UpdateScore(int value)
